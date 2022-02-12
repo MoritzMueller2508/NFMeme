@@ -33,10 +33,10 @@ function createJson(ipfsHash:string, name:string ="Test Name", description:strin
         "name": name,
         "symbol": "NFMeme",
         "description": description,
-        "image": "ipfs://" + description,
+        "image": "ipfs://" + ipfsHash,
         "properties": {
             "creators": [{"address": address, "share": 100}],
-            "files": [{"uri": "ipfs://" + description, "type": "image/png"}]
+            "files": [{"uri": "ipfs://" + ipfsHash, "type": "image/png"}]
         },
         "collection": {"name": "NFMeme", "family": "memes"}
     };
