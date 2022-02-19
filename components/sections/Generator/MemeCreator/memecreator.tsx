@@ -5,7 +5,7 @@ const MemeCreator = () => {
     return (
         <>
 
-            <div>Hello World</div>
+            Hello World from MemeCreator
 
         </>
     );

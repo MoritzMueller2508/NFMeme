@@ -5,7 +5,7 @@ const Profile = () => {
     return (
         <>
 
-            <div>Hello World</div>
+            Hello World from Profile
 
         </>
     );
