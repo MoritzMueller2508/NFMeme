@@ -3,11 +3,9 @@ import React from "react";
 const MintBar = () => {
 
     return (
-        <>
-
-            Hello World from MintBar
-
-        </>
-    );
+        <div>
+            MintBar Content
+        </div>
+    )
 }
 export default MintBar;

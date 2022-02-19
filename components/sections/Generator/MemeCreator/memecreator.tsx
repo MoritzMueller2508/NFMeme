@@ -3,11 +3,9 @@ import React from "react";
 const MemeCreator = () => {
 
     return (
-        <>
-
-            Hello World from MemeCreator
-
-        </>
-    );
+        <div className="NFMeme-memecreator-content">
+            MemeCreator Content
+        </div>
+    )
 }
 export default MemeCreator;

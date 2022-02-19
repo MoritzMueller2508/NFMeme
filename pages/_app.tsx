@@ -1,8 +1,11 @@
-import '../styles/globals.css'
+import '../styles/globals.scss'
+import '../styles/memecreator.scss'
 import type { AppProps } from 'next/app'
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+export default function App({ Component, pageProps }: AppProps) {
+  return (
+    <div suppressHydrationWarning className="NFMeme-main-container">
+      {typeof window === 'undefined' ? null : <Component {...pageProps} />}
+    </div>
+  );
 }
-
-export default MyApp

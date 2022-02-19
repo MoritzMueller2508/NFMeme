@@ -3,11 +3,7 @@ import React from "react";
 const Navbar = () => {
 
     return (
-        <>
-
-            Hello World from Navbar
-
-        </>
+        <div>Navbar Content</div>
     );
 }
 export default Navbar;

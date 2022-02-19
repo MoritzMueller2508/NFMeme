@@ -1,13 +1,18 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
 
 import Navbar from "../../components/sections/Navbar/navbar";
 
+type LayoutProps = {
+    noNavbar?: boolean,
+    noFooter?: boolean,
+    noHead?: boolean
+}
 
-const DefaultLayout = ({ children, noNavbar }) => (
+const DefaultLayout: FunctionComponent<LayoutProps> = (layoutProps) => (
     <>
-        {!noNavbar && <Navbar />}
-        {children}
+        {!layoutProps.noNavbar && <Navbar />}
+        {layoutProps.children}
     </>
-    )
+)
 
 export default DefaultLayout;
