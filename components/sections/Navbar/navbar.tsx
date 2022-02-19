@@ -5,7 +5,7 @@ const Navbar = () => {
     return (
         <>
 
-            <div>Hello World</div>
+            Hello World from Navbar
 
         </>
     );

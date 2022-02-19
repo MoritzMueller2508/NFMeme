@@ -5,7 +5,7 @@ const MintBar = () => {
     return (
         <>
 
-            <div>Hello World</div>
+            Hello World from MintBar
 
         </>
     );
