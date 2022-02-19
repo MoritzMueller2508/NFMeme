@@ -1,19 +1,29 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import { BrowserRouter } from 'react-router-dom'
-
-import Navbar from '../components/sections/Navbar/navbar'
+import type { NextPage } from 'next';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import routes from "./routes";
 
 
-const Home: NextPage = () => {
-  return (
-    <BrowserRouter>
-      <Navbar/>
-      <h1>Home</h1>
-    </BrowserRouter>
-  );
+const Home: any = () => {
+    <Router basename={process.env.REACT_APP_BASENAME || ""}>
+      <div>
+        {routes.map((route, index) => {
+          return (
+            <Route
+              key={index}
+              path={route.path}
+              exact={route.exact}
+              component={props => {
+                return (
+                  <route.layout {...props}>
+                    <route.component {...props} />
+                  </route.layout>
+                );
+              }}
+            />
+          );
+        })}
+      </div>
+    </Router>
 }
 
 export default Home
