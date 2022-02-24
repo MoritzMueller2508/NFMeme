@@ -9,10 +9,9 @@ import Navbar from '../components/sections/Navbar/navbar'
 
 const Home: NextPage = () => {
   return (
-    <BrowserRouter>
-      <Navbar/>
+
       <h1>Home</h1>
-    </BrowserRouter>
+
   );
 }
 
