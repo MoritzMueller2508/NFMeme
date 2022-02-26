@@ -27,3 +27,8 @@ h1 {
 * {
   box-sizing: border-box;
 }
+
+@import "../components/sections/Gallery/Picture/picture";
+//@import "./memecreator";
+@import "../components/utils/NFMButton/NFMButton";
+@import "../components/utils/NFMTextField/NFMTextField";

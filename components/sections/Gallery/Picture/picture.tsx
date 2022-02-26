@@ -1,13 +1,16 @@
-import React from "react";
+import React, { Component } from "react";
+//import "./picture.css"
 
-const Picture = () => {
 
+function Picture(props:any) {
+    
     return (
-        <>
+    
+        <div className="picture-container">
+            <img className="image" src={props.url} alt="logo" /> 
 
-            Hello World from Picture
-
-        </>
+        </div>
     );
 }
+    
 export default Picture;

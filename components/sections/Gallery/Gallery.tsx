@@ -1,11 +1,13 @@
-import React from "react";
+import React, { Fragment } from "react";
+import Frame from "./Frame/frame";
+import Picture from "./Picture/picture";
 
 // TODO: Use Picture/Frame here
 const Gallery = () => {
 
     return (
         <div>
-            Gallery Content
+            <Frame/>
         </div>
     );
 }

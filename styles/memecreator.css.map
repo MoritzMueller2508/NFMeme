@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,2BAA2B,CAAC;EACxB,gBAAgB,EAAE,wBAAwB;CAC7C",
+    "sources": [
+        "memecreator.scss"
+    ],
+    "names": [],
+    "file": "memecreator.css"
+}

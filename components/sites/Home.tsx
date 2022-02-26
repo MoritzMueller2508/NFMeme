@@ -7,8 +7,10 @@ const Home = () => {
 
     return (
         <div className="NFMeme-Home-container">
-            <MemeCreator />
-            <Gallery />
+            <MemeCreator/>
+            <div>
+                <Gallery />
+            </div>
             <About />
         </div>
     )
