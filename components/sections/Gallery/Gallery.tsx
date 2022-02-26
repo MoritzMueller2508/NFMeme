@@ -7,7 +7,7 @@ const Gallery = () => {
 
     return (
         <div>
-            <Frame/>
+            <Frame/> {/* maybe pass NFT-imges to Frame as prop (Array) */ }
         </div>
     );
 }
