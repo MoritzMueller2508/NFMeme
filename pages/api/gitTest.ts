@@ -9,13 +9,13 @@ import ignore from "ignore";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     simpleGit().clean(CleanOptions.FORCE);
     const options: Partial<SimpleGitOptions> = {
-        baseDir: "C:\\Users\\Lukas\\Projekte\\Test",
+        baseDir: "C:\\Users\\Lukas\\Projekte\\token-list",
         binary: 'git',
         maxConcurrentProcesses: 6,
     };
     const simpleGitObj = simpleGit(options);
 
-    appendFileSync("C:\\Users\\Lukas\\Projekte\\Test\\test.txt", "\nThis is a test");
+    appendFileSync("C:\\Users\\Lukas\\Projekte\\token-list\\src\\tokenssolana.tokenlist.json", "\nThis is a test");
 
     await simpleGitObj.add("test.txt")
     await simpleGitObj.commit("test")
