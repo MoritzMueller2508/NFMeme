@@ -6,7 +6,7 @@ import Picture from "./Picture/picture";
 const Gallery = () => {
 
     return (
-        <div>
+        <div className="gallery-class">
             <Frame/> {/* maybe pass NFT-imges to Frame as prop (Array) */ }
         </div>
     );
