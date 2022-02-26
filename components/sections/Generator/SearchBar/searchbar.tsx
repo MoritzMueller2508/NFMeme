@@ -3,11 +3,9 @@ import React from "react";
 const SearchBar = () => {
 
     return (
-        <>
-
-            Hello World from SearchBar
-
-        </>
-    );
+        <div>
+            SearchBar Content
+        </div>
+    )
 }
 export default SearchBar;

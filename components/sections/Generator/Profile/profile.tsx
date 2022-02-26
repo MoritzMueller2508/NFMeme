@@ -3,11 +3,9 @@ import React from "react";
 const Profile = () => {
 
     return (
-        <>
-
-            Hello World from Profile
-
-        </>
-    );
+        <div>
+            Profile Content
+        </div>
+    )
 }
 export default Profile;

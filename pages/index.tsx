@@ -1,19 +1,42 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import { BrowserRouter } from 'react-router-dom'
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import routes from "./routes";
 
-import Navbar from '../components/sections/Navbar/navbar'
+export default function App() {
+  console.log(process.env)
 
+  // this is temp, remove later (testing routes)
+  // add following for server side rendered pages (pageX.tsx must be located in dir)
+  // <NextLink href="/pageX">PageX (SSR)</NextLink>
+  const temp_testing_routes = (
+    <>
+      <div className="temp-testing-routes">
+        <h1>Click below links to test routing</h1>
+        {routes.map((route, index) => {
+          return (
+            <Link key={index} to={route.path}>{route.key}</Link>
+          );
+        })}
+      </div>
+    </>
+  )
 
-const Home: NextPage = () => {
   return (
-    <BrowserRouter>
-      <Navbar/>
-      <h1>Home</h1>
-    </BrowserRouter>
-  );
-}
+    <Router basename={process.env.REACT_APP_BASENAME || ""}>
+      <Routes>
+        {routes.map((route, index) => {
+          return (
+            <Route key={index} path={route.path} element={
+              <route.layout>
+                <route.component />
+              </route.layout>
+            } />
+          )
+        })
+        }
+      </Routes>
 
-export default Home
+      {temp_testing_routes}
+    </Router>
+  )
+} 
